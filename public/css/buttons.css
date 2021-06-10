@@ -45,6 +45,12 @@
     color: #37c77f;
 }
 
+.button-select button.negative {
+    background: #ffeded;
+    border: 1px solid #e9a1a1;
+    color: #c73737;
+}
+
 .button-select button:first-child {
     border-radius: 2rem 0 0 2rem;
 }

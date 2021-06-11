@@ -1,11 +1,16 @@
 const express = require('express');
 const path = require('path')
+const pages = require('./pages.js')
+
 const server = express();
 
 server
 .use(express.static('public'))
-.get('/', (req, res) => {
-    return res.sendFile(path.join(__dirname,'views', 'index.html'))
-})
+.set('views', path.join(__dirname,'views'))
+.set('view engine', 'hbs')
+.get('/', pages.index)
+.get('/orfanato', pages.orfanato)
+.get('/orfanatos', pages.orfanatos)
+.get('/create-orfanato', pages.create_orfanato)
 
 server.listen(5500);

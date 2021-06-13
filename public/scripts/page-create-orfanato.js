@@ -74,3 +74,12 @@ function toggleSelect(event) {
 
     input.value = button.dataset.value;
 }
+
+function validate(event) {
+    const Lat = document.querySelector('[name="lat"]').value;
+    const Lng = document.querySelector('[name="lng"]').value;
+    if(Lat == '' || Lng == '') {
+        event.preventDefault();
+        alert('Selecione um ponto no mapa!')
+    }
+}
